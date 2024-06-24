@@ -1,0 +1,66 @@
+
+<!DOCTYPE html><html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+        <title>Share your Google Sheets</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="Gsheet.css" rel="stylesheet" media="all" />
+    </head>
+<body>
+
+    
+            
+   
+    <div class="container">
+            <div class="left">   
+                <!-- <form class="row g-3"> -->
+                    <div class="col-md-6">
+                      <label for="inputEmail4" class="form-label">First Middle Last Name</label>
+                      <input type="text" class="form-control" id="FirstName">
+                      <input type="text" class="form-control" id="MiddleName">
+                      <input type="text" class="form-control" id="LastName">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Gender</label>
+                        <select id="Gender" class="form-select" placeholder="selected>Choose..." >
+                          <option selected> Choose... </option>
+                          <option>M</option>
+                          <option>F</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">LRN</label>
+                      <input type="text" class="form-control" id="LRN" placeholder="404678">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                      </div>
+                    
+                    <div class="col-12">
+                      <button type="button" class="btn btn-primary" onclick="adddata()">Add</button>
+                      <button type="button" class="btn btn-primary">Update</button>
+                      <button type="button" class="btn btn-primary">Delete</button>
+                    </div>
+                  <!-- </form>  -->
+            </div> 
+            
+            <div class="right">
+                <label>Seach Last Name</label>
+                <input type="text" id="myInput" onkeyup="searchTable()">
+                <div class="tblcontainer">
+                    <table id="dtable" class='w3-table-all w3-hoverable'>
+                    <tbody  class="output"">
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
